@@ -45,8 +45,10 @@ int main()
         g<<min(RMQ[a][P[dim]], RMQ[b-(1<<P[dim])+1][P[dim]])<<'\n';
     }
 
-    for(int i = 1; i <= N; i++) delete RMQ[i];
-    delete V, P, RMQ;
+    for(int i = 1; i <= N; i++) delete[] RMQ[i];
+    delete[] V;
+    delete[] P;
+    delete[] RMQ;
 
     return 0;
 }
